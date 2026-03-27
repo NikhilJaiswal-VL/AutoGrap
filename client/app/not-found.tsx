@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -5,9 +7,9 @@ export default function NotFound() {
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
           404 – Page Not Found
         </h2>
-        <a href="/" className="text-blue-600 hover:underline">
+        <Link href="/" className="text-blue-600 hover:underline">
           Return to Vehicle Selector
-        </a>
+        </Link>
       </div>
     </div>
   );

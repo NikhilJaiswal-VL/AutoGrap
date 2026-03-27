@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "Vehicle Selection Form – AutoGrab Code Challenge",
   "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
-    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "install:all": "npm install",
     "dev:server": "npm run dev --prefix server",
     "dev:client": "npm run dev --prefix client",
     "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
     "build:server": "npm run build --prefix server",
     "build:client": "cd client && NODE_ENV=production npm run build",
     "build": "npm run build:server && npm run build:client",
+    "test:server": "npm run test --prefix server",
+    "test:client": "npm run test --prefix client",
+    "test": "npm run test:server && npm run test:client",
     "start:server": "npm run start --prefix server",
     "start:client": "npm run start --prefix client",
     "start": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run start:server\" \"npm run start:client\""
