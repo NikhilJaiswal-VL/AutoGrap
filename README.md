@@ -73,6 +73,12 @@ npm run build
 npm run start
 ```
 
+## Testing 
+
+```bash
+npm run test
+```
+
 ## Vehicle Data
 
 ```
